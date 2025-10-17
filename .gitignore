@@ -1,0 +1,11 @@
+# Virtual environment
+.venv/
+
+# Logs and output
+logs/
+
+# OS / editor junk
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
