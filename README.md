@@ -4,7 +4,7 @@ A lightweight Python utility that monitors system performance in real time and l
 
 Overview
 
-The script continuously records system health metrics at adjustable intervals and writes each sample to structured log files. It’s designed to be simple, efficient, and easily extendable—ideal for learning how to monitor systems, automate tasks, or integrate performance monitoring into other Python-based tools.
+The script continuously records system health metrics at adjustable intervals and writes each sample to structured log files. It’s designed to be simple, efficient, and easily extendable; ideal for learning how to monitor systems, automate tasks, or integrate performance monitoring into other Python-based tools.
 
 Features
 
