@@ -65,7 +65,7 @@ def main():
         ts = datetime.now().isoformat(timespec="seconds")
         cpu = psutil.cpu_percent(interval=1)
         ram = psutil.virtual_memory().percent
-        disk = psutil.disk_usage("/").percent
+        disk = psutil.disk_usage(os.getenv("SystemDrive", "C:")).percent
         rx, tx = net_sample()
         batt = get_battery()
 
