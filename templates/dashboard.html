@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Health Monitor</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🖥️ System Health Monitor</h1>
+            <p class="subtitle">Real-time system metrics and performance monitoring</p>
+        </header>
+
+        <!-- Alerts Section -->
+        <div id="alerts-container"></div>
+
+        <!-- Current Metrics Cards -->
+        <div class="metrics-grid">
+            <div class="metric-card cpu-card">
+                <div class="metric-icon">📊</div>
+                <div class="metric-content">
+                    <h3>CPU</h3>
+                    <div class="metric-value" id="cpu-value">--%</div>
+                    <div class="metric-bar">
+                        <div class="bar-fill cpu-fill" id="cpu-bar"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="metric-card ram-card">
+                <div class="metric-icon">💾</div>
+                <div class="metric-content">
+                    <h3>Memory (RAM)</h3>
+                    <div class="metric-value" id="ram-value">--%</div>
+                    <div class="metric-bar">
+                        <div class="bar-fill ram-fill" id="ram-bar"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="metric-card disk-card">
+                <div class="metric-icon">💿</div>
+                <div class="metric-content">
+                    <h3>Disk</h3>
+                    <div class="metric-value" id="disk-value">--%</div>
+                    <div class="metric-bar">
+                        <div class="bar-fill disk-fill" id="disk-bar"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="metric-card battery-card">
+                <div class="metric-icon">🔋</div>
+                <div class="metric-content">
+                    <h3>Battery</h3>
+                    <div class="metric-value" id="battery-value">N/A</div>
+                    <div class="metric-bar">
+                        <div class="bar-fill battery-fill" id="battery-bar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Charts Section -->
+        <div class="charts-container">
+            <div class="chart-wrapper">
+                <h3>Last Hour Overview</h3>
+                <div id="chart-cpu" class="chart"></div>
+            </div>
+            <div class="chart-wrapper">
+                <h3>Memory Usage</h3>
+                <div id="chart-ram" class="chart"></div>
+            </div>
+            <div class="chart-wrapper">
+                <h3>Disk Usage</h3>
+                <div id="chart-disk" class="chart"></div>
+            </div>
+            <div class="chart-wrapper">
+                <h3>Network Activity</h3>
+                <div id="chart-network" class="chart"></div>
+            </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="stats-container">
+            <h2>Statistics (Last Hour)</h2>
+            <div class="stats-grid" id="stats-grid"></div>
+        </div>
+
+        <footer>
+            <p>Last updated: <span id="last-updated">--:--:--</span></p>
+            <p>Refresh interval: 3 seconds</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='dashboard.js') }}"></script>
+</body>
+</html>
