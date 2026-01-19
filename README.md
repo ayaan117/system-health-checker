@@ -126,29 +126,5 @@ CPU_WARN = 85
 RAM_WARN = 85
 DISK_WARN = 90
 
-Learning Objectives
-
-This project demonstrates:
-
-Using Python for system-level automation and monitoring
-
-File handling and data serialization (JSON, CSV)
-
-Working with third-party libraries (psutil)
-
-Writing modular and maintainable code with error handling
-
-Building a Flask web application with REST APIs
-
-Creating interactive dashboards with Plotly
-
-Real-time data visualization and updates
-
-Email or desktop notifications for high usage alerts
-
-Expanded cross-platform support
-
-Cloud integration with AWS CloudWatch or Grafana
-
 Author
 Ayaan
