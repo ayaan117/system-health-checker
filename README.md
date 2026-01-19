@@ -42,9 +42,53 @@ Libraries:
 psutil — system metrics collection
 
 json, csv, datetime, os — standard Python libraries for data handling
+
+Flask — web framework for the dashboard
+
+Plotly — interactive charting library
+
 Platform: Windows, macOS, Linux
 
 Setup & Usage
+
+**Option 1: CLI Only (health_check.py)**
+
+Clone the repository
+git clone https://github.com/ayaan117/system-health-checker.git
+cd system-health-checker
+
+Set up a virtual environment
+py -m venv .venv
+.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+
+Run the health checker
+python health_check.py
+
+Metrics will be displayed in real time and saved in the /logs directory.
+Press Ctrl + C to stop the script.
+
+**Option 2: Web Dashboard UI**
+
+With health_check.py running in one terminal, start the Flask web server in another:
+
+python app.py
+
+Open your browser to http://localhost:5000 to view the dashboard.
+
+The dashboard features:
+
+Real-time metric cards with progress bars
+
+Interactive Plotly charts (CPU, RAM, Disk, Network)
+
+Live alert notifications
+
+Statistics (Current/Avg/Max/Min for last hour)
+
+Auto-refresh every 3 seconds
+
+Dashboard Setup & Usage
 
 Clone the repository
 git clone https://github.com/ayaan117/system-health-checker.git
@@ -94,9 +138,11 @@ Working with third-party libraries (psutil)
 
 Writing modular and maintainable code with error handling
 
-Future Improvements
+Building a Flask web application with REST APIs
 
-Add a Flask dashboard for real-time visualizations
+Creating interactive dashboards with Plotly
+
+Real-time data visualization and updates
 
 Email or desktop notifications for high usage alerts
 
